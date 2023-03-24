@@ -34,3 +34,12 @@ export function getCategories(questions) {
   return questionsByCategory;
 }
 
+export function getSubmissionsByQuestions(submissions) {
+  const submissionsByQuestions = {};
+
+  submissions.forEach(s => {
+    submissionsByQuestions[s.questionId] = s.status;
+  });
+
+  return submissionsByQuestions;
+}
