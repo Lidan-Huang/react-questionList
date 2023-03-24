@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const QUESTIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/questions';
-const SUBMISSIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/submissions';
+// const QUESTIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/questions';
+// const SUBMISSIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/submissions';
 
 const questions = [
   {
@@ -225,7 +225,7 @@ const submissions = [
 function App() {
   //as for CORs problem, we couldn't get data from calling the APIs, so we use
   //dummy data here.
-  
+
   // const [questions, setQuestions] = useState([]);
   // const [submissions, setSubmissions] = useState([]);
   
