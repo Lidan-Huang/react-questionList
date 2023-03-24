@@ -10,7 +10,7 @@
 
 function Question({ question, submissionsByQuestions}) {
   const status = submissionsByQuestions[question.id] === undefined 
-    ? 'unattemped' : submissionsByQuestions[question.id];
+    ? 'unattempted' : submissionsByQuestions[question.id];
 
   return (
     <div className="question">
