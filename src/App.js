@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getCategories, getSubmissionsByQuestions } from "./utils";
+import Category from "./Category";
+
 /**
  * Show questions and their status on user interface.
  * 
@@ -262,9 +264,18 @@ function App() {
   const categories = Object.keys(questionsByCategory);
   const submissionsByQuestions = getSubmissionsByQuestions(submissions);
 
-  
+
   return (
-    <h1>Hello World!</h1>
+    <>
+      {categories.map(category => (
+        <Category
+          key={category}
+          category={category}
+          questionsByCategory={questionsByCategory}
+          submissionsByQuestions={submissionsByQuestions}
+        />
+      ))}
+    </>
   );
 }
 

@@ -47,7 +47,7 @@ export function getSubmissionsByQuestions(submissions) {
 
   submissions.forEach(s => {
     submissionsByQuestions[s.questionId] = 
-      s.status.toLowercase().replace('_', '-');
+      s.status.toLowerCase().replace('_', '-');
   });
 
   return submissionsByQuestions;
