@@ -1,4 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { getCategories, getSubmissionsByQuestions } from "./utils";
+/**
+ * Show questions and their status on user interface.
+ * 
+ * params: none
+ * status: 
+ *  - questions
+ *  - submissions
+ * 
+ * App -> Category / Question
+ */
 
 // const QUESTIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/questions';
 // const SUBMISSIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/submissions';
@@ -222,6 +233,8 @@ const submissions = [
   }
 ];
 
+
+
 function App() {
   //as for CORs problem, we couldn't get data from calling the APIs, so we use
   //dummy data here.
@@ -244,6 +257,12 @@ function App() {
   //   fetchData();
   // }, []);
 
+
+  const questionsByCategory = getCategories(questions);
+  const categories = Object.keys(questionsByCategory);
+  const submissionsByQuestions = getSubmissionsByQuestions(submissions);
+
+  
   return (
     <h1>Hello World!</h1>
   );

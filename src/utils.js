@@ -34,11 +34,20 @@ export function getCategories(questions) {
   return questionsByCategory;
 }
 
+
+/**
+ * Accepts a list of questions' submissions status, like:
+ *  [{questionId: 'blog-post', status: 'CORRECT}, ...]
+ * 
+ * returns an object, like:
+ *  {'blog-post': 'correct', ...}
+ */
 export function getSubmissionsByQuestions(submissions) {
   const submissionsByQuestions = {};
 
   submissions.forEach(s => {
-    submissionsByQuestions[s.questionId] = s.status;
+    submissionsByQuestions[s.questionId] = 
+      s.status.toLowercase().replace('_', '-');
   });
 
   return submissionsByQuestions;
