@@ -10,7 +10,7 @@ import Category from "./Category";
  *  - questions
  *  - submissions
  * 
- * App -> Category / Question
+ * App -> Category
  */
 
 // const QUESTIONS_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/questions';

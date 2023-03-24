@@ -1,6 +1,15 @@
 import Question from "./Question";
 
-/**
+/**Show each category with its related questions
+ * 
+ * props:
+ *  - category
+ *  - questionsByCategory
+ *  - submissionsByQuestions
+ * 
+ * status: none
+ * 
+ * App -> Category -> Question
  * 
  */
 
