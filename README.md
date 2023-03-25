@@ -1,4 +1,4 @@
 ## Creating a Question List Using React
 
-![Question List] (./questionListWithReact.png "question list")
+![Question List](./questionListWithReact.png "question list")
 
